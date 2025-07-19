@@ -6,11 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
-import Projects from "./pages/Projects";
-import Templates from "./pages/Templates";
-import Leads from "./pages/Leads";
-import Account from "./pages/Account";
+import DashboardMain from "./pages/DashboardMain";
+import ProjectsPage from "./pages/ProjectsPage";
+import TemplatesPage from "./pages/TemplatesPage";
+import LeadsPage from "./pages/LeadsPage";
+import ApiKeysPage from "./pages/ApiKeysPage";
+import AccountPage from "./pages/AccountPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,11 +26,12 @@ const App = () => (
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/dashboard/projects" element={<Projects />} />
-          <Route path="/dashboard/templates" element={<Templates />} />
-          <Route path="/dashboard/leads" element={<Leads />} />
-          <Route path="/dashboard/account" element={<Account />} />
+          <Route path="/dashboard" element={<DashboardMain />} />
+          <Route path="/dashboard/projects" element={<ProjectsPage />} />
+          <Route path="/dashboard/templates" element={<TemplatesPage />} />
+          <Route path="/dashboard/leads" element={<LeadsPage />} />
+          <Route path="/dashboard/api-keys" element={<ApiKeysPage />} />
+          <Route path="/dashboard/account" element={<AccountPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
